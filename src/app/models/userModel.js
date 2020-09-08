@@ -17,7 +17,7 @@ const UserSchema = new mongoose.Schema({
         require: true
     },
     skill: {
-        type: String,
+        type: Number,
         require: true
     },
     email: {
@@ -25,6 +25,16 @@ const UserSchema = new mongoose.Schema({
         unique: true,
         required: true,
         lowercase: true
+    },
+    discord: {
+        type: String
+    },
+    star: {
+        type: Number
+    },
+    status: {
+        type: Boolean,
+        default: true
     }
 })
 
